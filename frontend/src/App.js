@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AOS from 'aos';
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Nav from "./components/Nav";
-import Contact from "./components/Contact";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Thoughts from "./components/Thoughts";
-import ProjectItem from "./components/ProjectItem";
-import ThoughtItem from "./components/ThoughtItem";
-import './stylesheets/app.css'
+import Footer from "./pages/Footer";
+import Home from "./pages/Home";
+import Nav from "./pages/Nav";
+import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
+import About from "./pages/About";
+import Thoughts from "./pages/Thoughts";
+import ProjectItem from "./pages/ProjectItem";
+import ThoughtItem from "./pages/ThoughtItem";
+import './assets/stylesheets/app.css'
 import 'aos/dist/aos.css';
 
  // You can also use <link> for styles
