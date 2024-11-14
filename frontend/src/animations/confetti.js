@@ -146,7 +146,7 @@ export const confetti = {
 	}
 
 	function removeConfetti() {
-		stop();
+		//stop();
 		pause = false;
 		particles = [];
 	}

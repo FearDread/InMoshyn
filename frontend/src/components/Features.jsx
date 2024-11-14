@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion, useInView, useAnimation } from 'framer-motion'
-import { Partners } from '@/components/Partners'
+import { Partners } from './Partners';
 import Feature from './Features/Feature'
 
 export const Features = () => {

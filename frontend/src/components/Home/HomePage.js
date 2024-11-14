@@ -1,17 +1,20 @@
 import React, { useRef, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { Navbar } from '../Navbar'
-import { Hero } from '../Hero'
-import { Features } from '../Features'
-import { Portfolio } from '../Portfolio'
-import { ProjectDetail } from '../Routes/ProjectDetail'
+//import { Navbar } from '../Navbar'
+//import { Hero } from '../Hero'
+////import { Features } from '../Features'
+//import { Portfolio } from '../Portfolio'
+//import { ProjectDetail } from '../Routes/ProjectDetail'
 import { Process } from '../Process'
-import { Footer } from '../Footer'
+//mport { Footer } from '../Footer'
 import { ContactForm } from '../Form/ContactForm'
 import { Faq } from '../Faq'
 import { FormProvider } from '../Form/FormContext'
 
 import { projects } from '../Routes/projects'
+import "../../assets/stylesheets/app.css";
+import "../../assets/stylesheets/index.css";
+import "../../assets/stylesheets/home.css";
 
 const HomePage = () => {
 
@@ -49,9 +52,11 @@ const HomePage = () => {
 
   return (
     <FormProvider>
-      <Features />
+
       <Routes>
+               {/*       
         <Route path='/*' element={<Portfolio />} />
+ 
         {projects.map((project) => (
           <Route 
               key={project.id}
@@ -59,10 +64,10 @@ const HomePage = () => {
               render={() => <ProjectDetail project={project} />}
           />
         ))}
+          */}
       </Routes>
       <Process />
       <Faq ref={faqRef} />
-      <ContactForm />
     </FormProvider>
   )
 }

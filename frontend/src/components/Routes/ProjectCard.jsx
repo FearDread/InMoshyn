@@ -1,7 +1,7 @@
 import { motion, useInView, useAnimation } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-export const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project }) => {
 
     // Kind of 404 page
     if (!project) {
@@ -60,3 +60,5 @@ export const ProjectCard = ({ project }) => {
         </motion.div>
     )
 }
+
+export default ProjectCard;

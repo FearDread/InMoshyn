@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, forwardRef } from 'react'
-import { Accordion } from '@/shared/Accordion'
+import { Accordion } from '../shared/Accordion'
 import { useAnimation, useInView, motion } from 'framer-motion';
-import { useFormContext } from '@/components/Form/FormContext'
+import { useFormContext } from './Form/FormContext'
 
 export const Faq = forwardRef(function Faq(props, ref) {
 

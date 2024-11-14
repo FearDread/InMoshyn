@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import { confetti } from '@/animations/confetti'
+import { confetti } from '../../animations/confetti'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from "@fortawesome/free-solid-svg-icons"
 import { useForm, Controller } from 'react-hook-form'
-import { useFormContext } from '@/components/Form/FormContext'
-import { zodResolver } from '@hookform/resolvers/zod'
+import { useFormContext } from './FormContext'
+//import { zodResolver } from '@hookform/resolvers/zod'
 import { z, string } from 'zod'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
@@ -74,7 +74,7 @@ export const ContactForm = () => {
     // Form validation and submit handling
     const { control, handleSubmit, reset } = useForm({ 
         defaultValues: data,
-        resolver: zodResolver(schema), 
+        //resolver: zodResolver(schema), 
     })
 
     const phoneInputStyle = {
