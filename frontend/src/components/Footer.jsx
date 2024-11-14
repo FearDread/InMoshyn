@@ -1,10 +1,9 @@
 import { React, forwardRef } from 'react'
-import logoFooter from '@/assets/logoFooter.svg'
+import logoFooter from '../assets/logoFooter.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareXTwitter, faLinkedin, faMedium, faInstagram, faBehance, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
-
-export const Footer = forwardRef(function Footer(props, ref) {
+const Footer = forwardRef(function Footer(props, ref) {
 
     return (
         <section className='2xs:px-[1rem] md:px-[6rem] xl:px-[16rem] 2xl:px-[28rem] 3xl:px-[42rem] sm:py-8 2xs:py-6 bg-blue-dark relative overflow-hidden'>
@@ -52,10 +51,12 @@ export const Footer = forwardRef(function Footer(props, ref) {
             </div>
             <div className='flex pt-8'>
                 <div className='mx-auto'>
-                    <p className='text-white text-sm '>© Cooper Digital Agency 2024. All rights reserved.</p>
+                    <p className='text-white text-sm '>© InMoshyn Inc. 2024. All rights reserved.</p>
                 </div>
             </div>
             <div className='absolute inset-l-96 top-40 ml-48 w-[900px] h-[500px] backgroundGradientFooter opacity-60 scale-150 z-10'></div>
         </section>
     )
 })
+
+export default Footer;

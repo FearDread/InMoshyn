@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AOS from 'aos';
 import Footer from "./pages/Footer";
+
 import Home from "./pages/Home";
 import Nav from "./pages/Nav";
 import Contact from "./pages/Contact";

@@ -7,7 +7,9 @@ import fsdesign from "../assets/fs-design.svg";
 import webdev from "../assets/web-devlopment-icon.svg";
 import digital from "../assets/fs-digital-engi.svg";
 import { Link } from "react-router-dom";
-import { Hero } from "../components/Hero";
+import HomePage from "../components/Home/HomePage";
+///import { Hero } from "../components/Hero";
+import "../assets/stylesheets/home.css";
 
 export default function Home({darkMode}) {
   document.title = "Barlasify | Home";
@@ -19,7 +21,12 @@ export default function Home({darkMode}) {
   return (
 
     <>
-      <Hero />
+      <div className="homeContainer"> 
+      <div className="bg ">
+        <video id="background-video" loop muted autoPlay >
+          <source src="videos/Moshyn Promo Small.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div className="homeContent" data-aos="fade-up">
         <div className="line"></div>
         <div className="homeTechs">
@@ -47,6 +54,9 @@ export default function Home({darkMode}) {
           </div>
         </div>
       </div>
+      
+      <HomePage />
+
       <div className="homeContent" data-aos="fade-up">
         <div className="line"></div>
         <div className="homeExp">
@@ -141,7 +151,7 @@ export default function Home({darkMode}) {
           </div>
         </div>
       </div>
-
+    </div>
     </>
   );
 }
