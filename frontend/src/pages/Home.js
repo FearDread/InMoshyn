@@ -54,29 +54,9 @@ export default function Home({darkMode}) {
           </div>
         </div>
       </div>
-      
+
       <HomePage />
 
-      <div className="homeContent" data-aos="fade-up">
-        <div className="line"></div>
-        <div className="homeExp">
-          <h1 style={{color:!darkMode?'black':'white'}}>Our Experience</h1>
-          <div className="exps">
-            <div className="exp">
-              <h1>10+</h1>
-              <h3 style={{color:!darkMode?'black':'white'}}>Years Running Strong</h3>
-            </div>
-            <div className="exp">
-              <h1>200+</h1>
-              <h3 style={{color:!darkMode?'black':'white'}}>Clients</h3>
-            </div>
-            <div className="exp">
-              <h1>400+</h1>
-              <h3 style={{color:!darkMode?'black':'white'}}>Successfull Projects</h3>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="homeContent clientsContent" data-aos="fade-up">
 
       </div>

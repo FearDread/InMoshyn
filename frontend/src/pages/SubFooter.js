@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../assets/stylesheets/footer.css'
 
-function Footer() {
+function SubFooter() {
   return (
     <div className="footer">
         <div className="footer-content" data-aos="fade-in">
@@ -24,4 +24,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default SubFooter

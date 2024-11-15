@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AOS from 'aos';
-import Footer from "./pages/Footer";
-
+import SubFooter from "./pages/SubFooter";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Nav from "./pages/Nav";
 import Contact from "./pages/Contact";
@@ -24,7 +24,7 @@ AOS.init({
 function App() {
   const [darkMode,setdarkMode] = useState(true);
   let body = document.querySelector("body");
-  body.style.backgroundColor = darkMode ? "#111111" : "#fff";
+  body.style.backgroundColor = darkMode ? "rgb(28, 25, 83)" : "#fff";
   const handleDarkMode = () => {
     setdarkMode(!darkMode);
     if (darkMode) {
@@ -47,6 +47,7 @@ function App() {
             <Route exact path="project/:id" element={<ProjectItem darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
             <Route exact path="thought/:id" element={<ThoughtItem darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
           </Routes>
+          <SubFooter />
           <Footer />
         </BrowserRouter>
     </div>

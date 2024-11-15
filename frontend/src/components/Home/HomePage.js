@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 ////import { Features } from '../Features'
 //import { Portfolio } from '../Portfolio'
 //import { ProjectDetail } from '../Routes/ProjectDetail'
-import { Process } from '../Process'
+import { Process } from '../Process';
 //mport { Footer } from '../Footer'
 import { ContactForm } from '../Form/ContactForm'
 import { Faq } from '../Faq'
