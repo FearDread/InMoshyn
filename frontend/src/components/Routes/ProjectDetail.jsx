@@ -1,13 +1,13 @@
-import {Footer} from '@/components/Footer'
-import logoNav from '@/assets/logoNav.svg'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import Footer from '../Footer'
+import logo from '../../assets/logos/logo.png'
 import { projects } from './projects'
-import { useFormContext } from '@/components/Form/FormContext'
+import { useFormContext } from '../Form/FormContext'
 import ContactForm from '../Form/ContactForm'
 import { motion, useAnimation } from 'framer-motion'
 
-export const ProjectDetail = () => {
+const ProjectDetail = () => {
 
     // Preloading background slide animation
     const controls = useAnimation()
@@ -64,7 +64,7 @@ export const ProjectDetail = () => {
                         bounce: 0.5,
                     }}>
                     <a href="/">
-                        <img src={logoNav} alt="logo" className='2xs:w-20 sm:w-[25%] hover:scale-110 transition duration-500 spring' />
+                        <img src={logo} alt="logo" className='2xs:w-20 sm:w-[25%] hover:scale-110 transition duration-500 spring' />
                     </a>
                 </motion.div>
                 <div className='sm:flex 2xs:hidden pt-3 items-center'>
@@ -193,3 +193,4 @@ export const ProjectDetail = () => {
     )
 }
 
+export default ProjectDetail;

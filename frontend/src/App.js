@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AOS from 'aos';
+import ProjectDetail from "./components/Routes/ProjectDetail";
 import SubFooter from "./pages/SubFooter";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -45,7 +46,7 @@ function App() {
             <Route exact path="contact" element={<Contact  darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
             <Route exact path="projects" element={<Projects darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
             <Route exact path="about" element={<About darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
-            <Route exact path="project/:id" element={<ProjectItem darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
+            <Route exact path="project/:id" element={<ProjectDetail darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
             <Route exact path="thought/:id" element={<ThoughtItem darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
           </Routes>
           <SubFooter />

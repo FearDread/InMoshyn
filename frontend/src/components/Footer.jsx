@@ -1,5 +1,5 @@
 import { React, forwardRef } from 'react'
-import logoFooter from '../assets/logoFooter.svg'
+import logo from '../assets/logos/logo_transparent.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareXTwitter, faLinkedin, faMedium, faInstagram, faBehance, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
@@ -10,7 +10,7 @@ const Footer = forwardRef(function Footer(props, ref) {
             <div className='flex justify-between items-center w-full border-b-[1px] border-blue-mid relative z-20'>
                 <div className='pb-4'>
                     <a href="#">
-                        <img src={logoFooter} alt="logo" className='2xs:w-20 sm:w-[25%] hover:scale-110 transition duration-500 spring' />
+                        <img src={logo} alt="logo" className='2xs:w-20 sm:w-[25%] hover:scale-110 transition duration-500 spring' />
                     </a>
                 </div>
                 <div className='mt-10'>
