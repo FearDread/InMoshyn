@@ -29,29 +29,24 @@ const About = ({ darkMode }) => {
   }, [loading])
 
   return (
-    <div className="aboutContainer" data-aos="fade-in">
-      <div className="bg" style={{background: darkMode ? "rgba(0,0,0,.7)" : "rgba(255,255,255,.3)"}}>
+    <>
+    <div className="homeContainer" data-aos="fade-in">
+      <div className="bg" style={{background: darkMode ? "rgba(0,0,0,.1)" : "rgba(255,255,255,.3)"}}>
         <video id="background-video" loop muted autoPlay >
           <source src="videos/moshyn-promo.mp4" type="video/mp4" />
         </video>
       </div>
-     { /* <div className="cover" style={{ background: `url(${team})`, objectFit: 'cover', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat',zIndex:-1,height:'13%' }}>       </div>*/}
-
-      <div className="banner" style={{ marginTop: "370px" }} data-aos="fade-right">
-        <h1 style={{ fontSize: "2.5rem" }}>We're Barlasify</h1>
-        <div style={{ flexDirection: "column", marginLeft: "50px" }} className='banner-content'>
-          <span>
-            We are a team of passionate designers and developers who love to create
-            beautiful and functional websites and applications.
-          </span>
-          <div >
-            <Link to='/contact'> <button className="btn" style={{
-              marginTop: "25px",
-              marginLeft: "0px",
-            }}>Get Started</button></Link>
-          </div>
+      <div className="homeContent" data-aos="fade-up">
+        <div className="line"></div>
+        <div className="banner">
+        <h1 style={{color:!darkMode?'black':'white'}}>
+            <span style={{ color: "rgb(0, 153, 255)"}}>We are In-Moshyn </span> a team of passionate <span style={{ color: "rgb(0, 153, 255)"}}>designers</span>  and <span style={{ color: "rgb(0, 153, 255)"}}>developers</span> who love to create
+            beautiful and functional websites and applications. 
+          </h1>
         </div>
       </div>
+    </div>
+    <div className="homeContainer">
       <div className="aboutContent" data-aos="fade-in">
         <div className="about">
           <div className="line"></div>
@@ -197,10 +192,10 @@ const About = ({ darkMode }) => {
               </div>
             </div>
           </div>
-
+          </div>
         </div>
       </div>
-    </div>
+      </>
   )
 }
 

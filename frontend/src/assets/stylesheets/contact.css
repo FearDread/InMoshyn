@@ -22,20 +22,21 @@
     left: 0;
 }
 .banner{
-    background-color: black;
+    background-color: rgba(0,0,0,.8);
     width: fit-content;
     padding: 35px 35px;
-    float: right;
+    float: left;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: fit-content;
-    margin-left: 250px;
-    margin-top: 400px;
-    
-
-
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.banner h1 span {
+    font-size: 25px;
+    font-weight: bold;
 }
 .banner h1{
     font-size:1.5rem;
