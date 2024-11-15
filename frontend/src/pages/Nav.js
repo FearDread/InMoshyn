@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from "react";
 import nav from "../assets/stylesheets/nav.css";
-import logo from ".././assets/logo.png";
+import logo from ".././assets/logos/logo.png";
 import { Link, Outlet } from "react-router-dom";
 
 export default function Nav({darkMode,handleDarkMode}) {

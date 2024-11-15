@@ -1,21 +1,18 @@
+import React, { useEffect, useRef } from 'react'
 import { motion, useInView, useAnimation } from 'framer-motion'
-import { useEffect, useRef } from 'react'
 
-const ProjectCard = ({ project }) => {
 
-    // Kind of 404 page
-    if (!project) {
-        return <div>Ooops... Project not found</div>
-    }
-
-    // Hooks to animate section in viewport
+export const ProjectCard = ({ project }) => {
     const projectRef = useRef(null)
     const isInView = useInView(projectRef, { once: true })
+    const animation = useAnimation();
 
-    const animation = useAnimation()
+
+
 
     // From the top to the bottom reveal animation
     useEffect(() => {
+        /*
         if (isInView) {
             animation.start({
                 y: 0,
@@ -32,9 +29,13 @@ const ProjectCard = ({ project }) => {
                 y: 50,
                 opacity: 0,
             })
-        }
+        }*/
         
     }, [isInView, animation])
+
+    if (!project) {
+        return (<div>Ooops... Project not found</div>);
+    } else {
 
     return (
         <motion.div 
@@ -59,6 +60,6 @@ const ProjectCard = ({ project }) => {
             <p className='text-blue-dark pb-4 mx-4 truncate'>{project.description.concept}</p>
         </motion.div>
     )
+            
+    }
 }
-
-export default ProjectCard;

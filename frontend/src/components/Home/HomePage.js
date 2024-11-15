@@ -1,22 +1,17 @@
 import React, { useRef, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
-//import { Navbar } from '../Navbar'
-//import { Hero } from '../Hero'
-////import { Features } from '../Features'
-//import { Portfolio } from '../Portfolio'
-//import { ProjectDetail } from '../Routes/ProjectDetail'
+import { Features } from '../Features'
+import { Portfolio } from '../Portfolio'
 import { Process } from '../Process';
-//mport { Footer } from '../Footer'
 import { ContactForm } from '../Form/ContactForm'
 import { Faq } from '../Faq'
 import { FormProvider } from '../Form/FormContext'
-
 import { projects } from '../Routes/projects'
 import "../../assets/stylesheets/app.css";
 import "../../assets/stylesheets/index.css";
 import "../../assets/stylesheets/home.css";
 
-const HomePage = () => {
+const HomePage = ({darkMode}) => {
 
   // FAQ section background change on scroll
   const faqRef = useRef(null);
@@ -52,7 +47,6 @@ const HomePage = () => {
 
   return (
     <FormProvider>
-
       <Routes>
                {/*       
         <Route path='/*' element={<Portfolio />} />
@@ -66,6 +60,8 @@ const HomePage = () => {
         ))}
           */}
       </Routes>
+      <Features />
+      <Portfolio />
       <Process />
       <Faq ref={faqRef} />
     </FormProvider>

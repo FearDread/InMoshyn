@@ -24,7 +24,8 @@ AOS.init({
 function App() {
   const [darkMode,setdarkMode] = useState(true);
   let body = document.querySelector("body");
-  body.style.backgroundColor = darkMode ? "rgb(28, 25, 83)" : "#fff";
+  body.style.backgroundColor = darkMode ? "rgb(0, 153, 255)" : "#fff";
+  body.style.color = darkMode ? "#FFF" : "#111";
   const handleDarkMode = () => {
     setdarkMode(!darkMode);
     if (darkMode) {

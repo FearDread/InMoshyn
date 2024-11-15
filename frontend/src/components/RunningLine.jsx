@@ -1,5 +1,5 @@
 import React from 'react'
-import done from '@/assets/done.png'
+import done from '../assets/done.png'
 
 // How to iterate and render each element from array multiple times? :/
 const dataSet = [

@@ -1,8 +1,4 @@
 import React from "react";
-import home from "../assets/stylesheets/home.css";
-import web from ".././assets/logo1.svg";
-import app from ".././assets/logo2.svg";
-import e from ".././assets/logo5.svg";
 import fsdesign from "../assets/fs-design.svg";
 import webdev from "../assets/web-devlopment-icon.svg";
 import digital from "../assets/fs-digital-engi.svg";
@@ -12,50 +8,33 @@ import HomePage from "../components/Home/HomePage";
 import "../assets/stylesheets/home.css";
 
 export default function Home({darkMode}) {
-  document.title = "Barlasify | Home";
+  document.title = "In-Moshyn | Home";
   
   const handleClick = (e) => {
     e.target.previousElementSibling.classList.toggle("active");
     e.target.classList.toggle("dull");
   };
+  
   return (
 
     <>
       <div className="homeContainer"> 
-      <div className="bg ">
+      <div className="bg" style={{background: darkMode ? "rgba(0,0,0,.7)" : "rgba(255,255,255,.3)"}}>
         <video id="background-video" loop muted autoPlay >
-          <source src="videos/Moshyn Promo Small.mp4" type="video/mp4" />
+          <source src="videos/tech-preview.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="homeContent" data-aos="fade-up">
         <div className="line"></div>
         <div className="homeTechs">
-          <h1 style={{color:!darkMode?'black':'white'}}>
-            <span style={{ color: "rgb(8, 175, 115,1)" }}>Technology</span> for
+        <h1 style={{color:!darkMode?'black':'white'}}>
+            <span style={{ color: "rgb(0, 153, 255)" }}>Technology</span> for
             Any part of your Business
           </h1>
-          <div className="techs">
-            <div className="tech">
-              <img src={web} alt="web" />
-              <h3 style={{color:!darkMode?'black':'white'}}>Full Stack Web Development</h3>
-            </div>
-            <div className="tech">
-              <img src={app} alt="app" />
-              <h3>Mobile pp Development</h3>
-            </div>
-            <div className="tech">
-              <img src={digital} alt="ar/vr" />
-              <h3 style={{color:!darkMode?'black':'white'}}>Digital Marketing</h3>
-            </div>
-            <div className="tech">
-              <img src={e} alt="ui/ux" />
-              <h3 style={{color:!darkMode?'black':'white'}}>Design & UI/UX</h3>
-            </div>
-          </div>
         </div>
       </div>
 
-      <HomePage />
+      <HomePage darkMode={darkMode} />
 
       <div className="homeContent clientsContent" data-aos="fade-up">
 

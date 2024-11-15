@@ -1,15 +1,15 @@
+import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/free-mode'
 import { FreeMode, Pagination } from 'swiper/modules'
 import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { projects } from '../components/Routes/projects'
 import { ProjectCard } from '../components/Routes/ProjectCard'
-import { Link } from 'react-router-dom'
-import { useRef } from 'react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/free-mode'
 
 const Slider = () => {
 

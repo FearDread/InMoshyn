@@ -1,42 +1,42 @@
 import React, { useState, useEffect } from 'react'
-import "../assets/stylesheets/about.css";
+import { Link } from 'react-router-dom';
 import leadership from ".././assets/Leadership.png";
 import dna from ".././assets/dna.png";
 import lightning from ".././assets/lightning.png";
 import rubberband from ".././assets/rubberband.png";
-import team from ".././assets/teamwork.jpg";
 import one from ".././assets/number1-icon.svg";
 import two from ".././assets/number2-icon.svg";
 import three from ".././assets/number3-icon.svg";
 import four from ".././assets/number4-icon.svg";
-import { Link } from 'react-router-dom';
-import axios from 'axios'
 import Loader from './Loader';
-export default function About({ darkMode }) {
-  const [loading, setloading] = useState(true)
-  const [data, setdata] = useState([])
-  useEffect(() => {
-    getMembers();
-  }, [])
-  const getMembers = async () => {
-    try {
-      const { data: finalData } = await axios.get("/api/v1/user/members");
-      console.log(finalData)
-      setdata(finalData.data)
-      setloading(false)
-    } catch (error) {
-      alert("Something went wrong")
-    }
-  }
-  document.title = "Barlasify | About";
-  // const handleClick = (e) => {
-  //   e.target.previousElementSibling.classList.toggle("active");
-  //   e.target.classList.toggle("dull");
-  // };
+import "../assets/stylesheets/about.css";
+
+const About = ({ darkMode }) => {
+  const [loading, setLoading] = useState(true)
+  const [data, setData] = useState([])
+
+  document.title = "In-Moshyn | About";
+
+  const handleClick = (e) => {
+     e.target.previousElementSibling.classList.toggle("active");
+     e.target.classList.toggle("dull");
+   };
+   
+   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, [loading])
+
   return (
     <div className="aboutContainer" data-aos="fade-in">
-      <div className="cover" style={{ background: `url(${team})`, objectFit: 'cover', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat',zIndex:-1,height:'13%' }}>
+      <div className="bg" style={{background: darkMode ? "rgba(0,0,0,.7)" : "rgba(255,255,255,.3)"}}>
+        <video id="background-video" loop muted autoPlay >
+          <source src="videos/moshyn-promo.mp4" type="video/mp4" />
+        </video>
       </div>
+     { /* <div className="cover" style={{ background: `url(${team})`, objectFit: 'cover', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat',zIndex:-1,height:'13%' }}>       </div>*/}
+
       <div className="banner" style={{ marginTop: "370px" }} data-aos="fade-right">
         <h1 style={{ fontSize: "2.5rem" }}>We're Barlasify</h1>
         <div style={{ flexDirection: "column", marginLeft: "50px" }} className='banner-content'>
@@ -145,7 +145,7 @@ export default function About({ darkMode }) {
             We believe the best solutions lay at the intersection of intelligent design and strong engineering. Our leadership works continually to protect and instill this vision in every process, project and team member.
           </span>
           {loading ? <Loader /> : <div className="clientsGrid">
-            {data.map((item) =>
+            {data && data.map((item) =>
               <div key={item._id} className="client_detail">
                 <img src={item.image} alt="" width="200px" height="200px" />
                 <h2 style={{ textDecoration: 'none', color: !darkMode ? 'black' : 'white' }}>{item.name}</h2>
@@ -203,3 +203,5 @@ export default function About({ darkMode }) {
     </div>
   )
 }
+
+export default About;

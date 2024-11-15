@@ -1,17 +1,27 @@
+import fear1 from '../../assets/projects/fear-admin-project-1.png'
+import fear2 from '../../assets/projects/fear-admin-project-2.png'
+import fear3 from '../../assets/projects/fear-admin-project-3.png'
 
-const projects = [
+export const imagesList = {
+    'fear': [fear1, fear2, fear3],
+    'ekomix': [fear1, fear2, fear3],
+    'gfolio': [fear1, fear2, fear3],
+    'fear-admin': [fear1, fear2, fear3],
+}
+
+export const projects = [
     {
         id: 'fear-api',
         'card-title': 'fear-api',
         title: 'F.E.A.R API',
         description: {
             concept: "The corporate website we created for YesOR is a digital beacon that not only mirrors their corporate persona but also affirms their position as a market leader.",
-            year: '2023',
-            client: 'YesOR',
+            year: '2024',
+            client: 'express',
             website: 'June 2, 2023',
         },
-        tags: [ 'UI/UX', 'Development' ],
-        images: ["assets/feature1.png"],
+        tags: [ 'REST', 'Development' ],
+        images: [imagesList['fear']],
     },
     {
         id: 'E-Komix',
@@ -24,7 +34,7 @@ const projects = [
             website: 'June 2, 2023',
         },
         tags: [ 'UI/UX','Development','E-Commerce' ],
-        images: ["assets/feature2.png"],
+        images: [imagesList['fear']],
     },
     {
         id: 'fear-admin',
@@ -37,7 +47,7 @@ const projects = [
             website: 'June 2, 2023',
         },
         tags: [ 'UI/UX', 'Development' ],
-        images: ["assets/feature3.png"],
+        images: [imagesList['fear']],
     }
 ]
 
