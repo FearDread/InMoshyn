@@ -7,30 +7,15 @@ export const ProjectCard = ({ project }) => {
     const isInView = useInView(projectRef, { once: true })
     const animation = useAnimation();
 
-
-
-
-    // From the top to the bottom reveal animation
     useEffect(() => {
-        /*
+
         if (isInView) {
-            animation.start({
-                y: 0,
-                opacity: 1,
-                transition: {
-                    type: 'spring',
-                    duration: 1.2,
-                    bounce: 0.5,
+            animation.start({y: 0, opacity: 1, transition: {
+                type: 'spring', duration: 1.2,  bounce: 0.5 
                 }
             })
         }
-        if (!isInView) {
-            animation.start({
-                y: 50,
-                opacity: 0,
-            })
-        }*/
-        
+        if (!isInView)  animation.start({ y: 50, opacity: 0 });
     }, [isInView, animation])
 
     if (!project) {

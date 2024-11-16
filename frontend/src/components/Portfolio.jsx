@@ -1,20 +1,18 @@
-import { useEffect, useRef } from 'react'
-import { motion, useInView, useAnimation } from 'framer-motion'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { motion, useInView, useAnimation } from 'framer-motion'
 import { projects } from './Routes/projects'
 import { ProjectCard } from './Routes/ProjectCard'
 import Slider from '../shared/Slider'
 import RunningLine from './RunningLine'
 
 
-export const Portfolio = () => {
+const Portfolio = () => {
 
     const portfolioRef = useRef(null)
     const isInView = useInView(portfolioRef, { once: true })
-
     const animation = useAnimation()
 
-    // On place opaque reveal animation
     useEffect(() => {
         animation.start({
             opacity: isInView ? 1 : 0,
@@ -60,3 +58,4 @@ export const Portfolio = () => {
     )
 }
 
+export default Portfolio;

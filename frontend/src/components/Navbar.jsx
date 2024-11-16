@@ -18,7 +18,7 @@ export const Navbar = () => {
                         bounce: 0.5,
                     }}>
                     <a href="/" className=''>
-                        <img src={logo} alt="logo" className='2xs:w-20 sm:w-[25%] hover:scale-110 transition duration-500 spring' />
+                        <img src={logo} alt="logo" style={{"margin-left" : 20}} className='2xs:w-20 sm:w-[25%] hover:scale-110 transition duration-500 spring' />
                     </a>
                 </motion.div>
                 <div className='sm:flex 2xs:hidden pt-3 items-center'>

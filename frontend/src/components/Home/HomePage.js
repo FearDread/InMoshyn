@@ -1,12 +1,13 @@
 import React, { useRef, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Features } from '../Features'
-import { Portfolio } from '../Portfolio'
+import  Portfolio  from '../Portfolio'
 import { Process } from '../Process';
 import { ContactForm } from '../Form/ContactForm'
 import { Faq } from '../Faq'
 import { FormProvider } from '../Form/FormContext'
 import { projects } from '../Routes/projects'
+import ProjectDetail from "../Routes/ProjectDetail";
 import "../../assets/stylesheets/app.css";
 import "../../assets/stylesheets/index.css";
 import "../../assets/stylesheets/home.css";
@@ -47,18 +48,15 @@ const HomePage = ({darkMode}) => {
 
   return (
     <FormProvider>
-      <Routes>
-               {/*       
+      <Routes>    
         <Route path='/*' element={<Portfolio />} />
- 
         {projects.map((project) => (
           <Route 
               key={project.id}
               path={`/project/${project.id}`}
               render={() => <ProjectDetail project={project} />}
           />
-        ))}
-          */}
+        ))} 
       </Routes>
       <Features />
       <Portfolio />
