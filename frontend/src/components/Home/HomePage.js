@@ -48,16 +48,6 @@ const HomePage = ({darkMode}) => {
 
   return (
     <FormProvider>
-      <Routes>    
-        <Route path='/*' element={<Portfolio />} />
-        {projects.map((project) => (
-          <Route 
-              key={project.id}
-              path={`/project/${project.id}`}
-              render={() => <ProjectDetail project={project} />}
-          />
-        ))} 
-      </Routes>
       <Features />
       <Portfolio />
       <Process />
