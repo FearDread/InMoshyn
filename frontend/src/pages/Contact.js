@@ -1,12 +1,24 @@
 import React, { useRef } from 'react'
 import "../assets/stylesheets/contact.css";
 import emailjs from '@emailjs/browser';
+import axios from "axios"
 
 //Fix this all the data that has to be submited must be under form tag
 //Also add styling when the message is succesfull in then function and when the message is failed in the error function
 function Contact({ darkMode }) {
-  document.title = "Barlasify | Get in touch";
+  document.title = "In-Moshyn | Get in touch";
   const form = useRef();
+
+  const contact = async (data) => {
+    console.log('data = ', data);
+    const email  = data.email
+  
+    if (!email) alert('Missing email address. Please provide a correct email address.' );
+
+    await axios.post("http://localhost:4000/fear/api/mail/contact", data)
+    .then((res) => {if (res.success) return true })
+    .catch((error) => { return false });
+  }
   const sendEmail = (e) => {
     e.preventDefault();
     let name = document.getElementById("name").value;
@@ -67,7 +79,7 @@ function Contact({ darkMode }) {
             <button className="btn" onClick={handleClick}>Other</button>
           </div>
         </div>
-        <form ref={form} className="formGrid" onSubmit={sendEmail}>
+        <form ref={form} className="formGrid" onSubmit={contact}>
           <div className="formGroup">
             <input type="text" name="name" id="name" placeholder='Full Name' style={{ color: !darkMode ? 'black' : 'white' }} />
           </div>
@@ -94,7 +106,7 @@ function Contact({ darkMode }) {
 
         </span>
         <div style={{ margin: '50px' }}>
-          <button type='submit' className="btn" onClick={sendEmail}>Submit</button>
+          <button type='submit' className="btn" onSubmit={contact}>Submit</button>
         </div>
       </div>
     </div>

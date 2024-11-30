@@ -7,21 +7,25 @@ import axios from 'axios'
 
 import "../assets/stylesheets/thoughts.css";
 
-export default function Thoughts({ darkMode }) {
+export default function Blog({ darkMode }) {
   document.title = "Barlasify | Thoughts";
   const [loading, setloading] = useState(true)
   const [data,setdata] = useState([])
   useEffect(() => {
     getThoughts();
   }, [])
+  
   const getThoughts = async () => {
-    try {
-      const { data:finalData } = await axios.get("/api/v1/blogs");
-      setdata(finalData.data) 
-      setloading(false)
-    } catch (error) {
-      //handle error
-    }
+    await axios.get("http://localhost:4000/fear/api/blog")
+      .then((response) => {
+        setdata(response.result);
+        setloading(false);
+      })
+      .catch((error) => {
+        throw new Error(error);
+      })
+
+
   }
   return (
 

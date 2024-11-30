@@ -9,7 +9,7 @@ import Nav from "./pages/Nav";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
-import Thoughts from "./pages/Thoughts";
+import Blog from "./pages/Blog";
 import ProjectItem from "./pages/ProjectItem";
 import ThoughtItem from "./pages/ThoughtItem";
 import './assets/stylesheets/app.css'
@@ -42,7 +42,7 @@ function App() {
           <Nav  darkMode={darkMode} handleDarkMode={handleDarkMode}/>
           <Routes>
             <Route exact index path="/" element={<Home  darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
-            <Route exact path="thoughts" element={<Thoughts darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
+            <Route exact path="blog" element={<Blog darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
             <Route exact path="contact" element={<Contact  darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
             <Route exact path="projects" element={<Projects darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
             <Route exact path="about" element={<About darkMode={darkMode} handleDarkMode={handleDarkMode}/>} />
