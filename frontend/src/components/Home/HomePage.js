@@ -11,6 +11,7 @@ import ProjectDetail from "../Routes/ProjectDetail";
 import "../../assets/stylesheets/app.css";
 import "../../assets/stylesheets/index.css";
 import "../../assets/stylesheets/home.css";
+import Contact from '../../pages/Contact';
 
 const HomePage = ({darkMode}) => {
 
@@ -52,6 +53,7 @@ const HomePage = ({darkMode}) => {
       <Portfolio />
       <Process />
       <Faq ref={faqRef} />
+      <ContactForm />
     </FormProvider>
   )
 }

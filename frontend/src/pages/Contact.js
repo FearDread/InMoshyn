@@ -2,6 +2,8 @@ import React, { useRef } from 'react'
 import "../assets/stylesheets/contact.css";
 import emailjs from '@emailjs/browser';
 import axios from "axios"
+import ContactForm from '../components/Form/ContactForm';
+import { FormProvider } from '../components/Form/FormContext';
 
 //Fix this all the data that has to be submited must be under form tag
 //Also add styling when the message is succesfull in then function and when the message is failed in the error function
@@ -57,6 +59,13 @@ function Contact({ darkMode }) {
     })
     e.target.classList.add("btnActive");
   }
+  return (
+  <FormProvider> 
+     <ContactForm />
+  </FormProvider>
+
+  )
+
   return (
     <div className="contactContainer">
       <div className="cover" data-aos="fade-in">
